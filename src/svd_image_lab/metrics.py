@@ -1,3 +1,5 @@
+
+
 def calculate_mse(original, compressed):
     return ((original - compressed) ** 2).mean()
 

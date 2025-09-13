@@ -1,3 +1,5 @@
+import numpy as np
+
 def decompose_image(image):
     """Perform Singular Value Decomposition on the input image."""
     import numpy as np
