@@ -13,15 +13,15 @@ svd-image-lab/
 │
 ├── notebooks/
 │   ├── 01_svd_basics.ipynb
-│   ├── 02_image_compression.ipynb
-│   ├── 03_noise_reduction.ipynb
+│   ├── 02_matric_decomposition.ipynb
+│   ├── 03_full_image_decomposition.ipynb
 │   └── ...
 │
 ├── src/
 │   ├── __init__.py
+│   ├── metrics.py
 │   ├── svd_utils.py
-│   ├── denoise.py
-│   └── compression.py
+│   └── visualization.py
 │
 ├── README.md
 └── requirements.txt
