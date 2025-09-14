@@ -1,35 +1,68 @@
-# SVD Image Lab
+# 🖼️ SVD Image Lab
 
-## Overview
-The SVD Image Lab project is designed to explore the concepts of Singular Value Decomposition (SVD) and its applications in image processing. This project provides tools for image decomposition, reconstruction, and analysis using SVD, along with visualizations and performance metrics.
+This repository explores **image decomposition and enhancement** techniques using the **Singular Value Decomposition (SVD)**.  
 
-## Mathematical Concepts
-Singular Value Decomposition is a mathematical technique used in linear algebra to factorize a matrix into three other matrices. For a given matrix \( A \), SVD can be expressed as:
+The project is structured around **Jupyter Notebooks** that walk through different methods of image enhancement and denoising. Supporting code is organized into a lightweight `src/` folder for modularity and future reuse.
 
-\[ A = U \Sigma V^T \]
+---
 
-Where:
-- \( U \) is an orthogonal matrix containing the left singular vectors.
-- \( \Sigma \) is a diagonal matrix containing the singular values.
-- \( V^T \) is the transpose of an orthogonal matrix containing the right singular vectors.
+## 📂 Repository Structure
 
-The singular values in \( \Sigma \) provide insight into the importance of each corresponding singular vector, which can be utilized for dimensionality reduction and image compression.
-
-## Examples
-The project includes several Jupyter notebooks that demonstrate the use of SVD in image processing:
-
-1. **01_svd_basics.ipynb**: Introduces the basics of SVD with theoretical explanations and examples.
-2. **02_image_decomposition.ipynb**: Shows how to apply SVD for image decomposition, allowing for the reconstruction of images from their singular values.
-3. **03_metrics_and_analysis.ipynb**: Analyzes the results of SVD on images and discusses various performance metrics such as Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), and Structural Similarity Index (SSIM).
-
-## Running the Code
-To run the code in this project, you will need to install the required dependencies. You can do this by running:
+```plaintext
+svd-image-lab/
+│
+├── notebooks/
+│   ├── 01_svd_basics.ipynb
+│   ├── 02_image_compression.ipynb
+│   ├── 03_noise_reduction.ipynb
+│   └── ...
+│
+├── src/
+│   ├── __init__.py
+│   ├── svd_utils.py
+│   ├── denoise.py
+│   └── compression.py
+│
+├── README.md
+└── requirements.txt
 
 ```
+- **`notebooks/`**  
+  Jupyter notebooks that walk through experiments, explanations, and visualizations step by step.  
+  Each notebook is self-contained and demonstrates a different perspective.
+
+- **`src/svd_image_lab/`**  
+  Isolated utility functions for Singular Value Decomposition (SVD) and image reconstruction.  
+  These keep the math and algorithms reusable, clean, and easier to test or expand later.
+
+- **`docs`**  
+  Outlines core concepts discussed in the /givnotebooks and utilized in /src
+
+
+---
+
+## 🚀 Usage
+
+1. **Clone the repository**:
+
+```bash
+git clone https://github.com/yourusername/svd-image-lab.git
+cd svd-image-lab
+```
+2. **Install dependencies**
+
+```bash
 pip install -r requirements.txt
 ```
 
-After installing the dependencies, you can open the Jupyter notebooks in the `notebooks/` directory to explore the examples and experiments.
+3. **Launch Jupyter Notebooks**
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+```bash
+jupyter notebook notebooks/
+```
+
+4. **Explore the notebooks:**
+
+- Open any notebook in the notebooks/ folder.
+- Run cells sequentially to see explanations, visualizations, and SVD-based image processing in action.
+- You can also import functions from src/svd_image_lab/ for your own experiments.
